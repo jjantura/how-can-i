@@ -1,0 +1,95 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           servant-with-basic-auth
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/servant-with-basic-auth#readme>
+homepage:       https://github.com/githubuser/servant-with-basic-auth#readme
+bug-reports:    https://github.com/githubuser/servant-with-basic-auth/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/servant-with-basic-auth
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_servant_with_basic_auth
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , either
+    , mtl
+    , protolude
+    , servant-client
+    , servant-server
+    , text
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010
+
+executable servant-with-basic-auth-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_servant_with_basic_auth
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , either
+    , mtl
+    , protolude
+    , servant-client
+    , servant-server
+    , servant-with-basic-auth
+    , text
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010
+
+test-suite servant-with-basic-auth-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_servant_with_basic_auth
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , either
+    , hspec
+    , hspec-wai
+    , hspec-wai-json
+    , mtl
+    , protolude
+    , servant-client
+    , servant-server
+    , servant-with-basic-auth
+    , text
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010
